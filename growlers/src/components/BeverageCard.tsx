@@ -1,7 +1,8 @@
-import React from "react";
-import { SimpleGrid, Progress, Text, Button, Box } from "@chakra-ui/react";
+import React from 'react';
+import { SimpleGrid, Progress, Text, Button, Box } from '@chakra-ui/react';
 
-import { Beverage } from "../types";
+import { Beverage } from '../types';
+import { addToCart } from '../store';
 
 const BeverageCard = ({ beverage }: { beverage: Beverage }) => (
   <SimpleGrid
@@ -23,10 +24,10 @@ const BeverageCard = ({ beverage }: { beverage: Beverage }) => (
       </Text>
       <Box
         style={{
-          display: "inline-block",
-          minWidth: "1.5rem",
-          minHeight: "0.8rem",
-          marginRight: "0.5rem",
+          display: 'inline-block',
+          minWidth: '1.5rem',
+          minHeight: '0.8rem',
+          marginRight: '0.5rem',
           backgroundColor: beverage.beverageColor,
         }}
       >
@@ -35,13 +36,13 @@ const BeverageCard = ({ beverage }: { beverage: Beverage }) => (
       <Text
         color="gray.500"
         isTruncated
-        style={{ display: "inline-block", verticalAlign: "bottom" }}
+        style={{ display: 'inline-block', verticalAlign: 'bottom' }}
       >
         {beverage.beverageStyle} - {beverage.abv}%
       </Text>
       <Progress hasStripe value={beverage.level} mt={3} />
       <Box mt={3} align="right">
-        <Button>Add To Cart</Button>
+        <Button onClick={() => addToCart(beverage)}>Add To Cart</Button>
       </Box>
     </div>
   </SimpleGrid>
