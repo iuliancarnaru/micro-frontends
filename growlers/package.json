@@ -1,5 +1,5 @@
 {
-  "name": "wp5-starter-ts",
+  "name": "growlers",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
@@ -9,8 +9,8 @@
   },
   "license": "MIT",
   "author": {
-    "name": "Jack Herrington",
-    "email": "jherr@pobox.com"
+    "name": "Iulian Carnaru",
+    "email": "iulian.carnaru@gmail.com"
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
@@ -34,6 +34,7 @@
     "@emotion/styled": "^11.0.0",
     "framer-motion": "^2.9.5",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "valtio": "^0.4.8"
   }
 }
